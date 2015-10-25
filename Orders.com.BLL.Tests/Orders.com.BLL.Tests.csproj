@@ -35,6 +35,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Peasy, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Peasy.1.0.0.5\lib\portable-net451+win81\Peasy.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Peasy.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Peasy.Core.1.0.0.2\lib\portable-net451+win81\Peasy.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Shouldly, Version=2.6.0.0, Culture=neutral, PublicKeyToken=6042cbcb05cbc941, processorArchitecture=MSIL">
+      <HintPath>..\packages\Shouldly.2.6.0\lib\net40\Shouldly.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -52,6 +64,19 @@
   <ItemGroup>
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Orders.com.BLL\Orders.com.BLL.csproj">
+      <Project>{ce4be061-889b-4169-8403-82269e4ec7b9}</Project>
+      <Name>Orders.com.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Orders.com.Core\Orders.com.Core.csproj">
+      <Project>{ebb3a99a-5057-4f6a-bed7-43661d43fae9}</Project>
+      <Name>Orders.com.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
